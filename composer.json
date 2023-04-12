@@ -1,0 +1,108 @@
+{
+    "name": "palantirnet/drupal-skeleton",
+    "description": "A Drupal 8 project template.",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Palantir.net",
+            "email": "info@palantir.net"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "acidaniel/challenge_movie_entity",
+                "version": "1.0",
+                "type": "drupal-module",
+                "dist": {
+                    "url": "https://github.com/acidaniel/challenge_movie_entity/archive/refs/heads/master.zip",
+                    "type": "zip"
+                }
+            }
+        }
+    ],
+    "require": {
+        "acidaniel/challenge_movie_entity": "^1.0",
+        "composer/installers": "^2.0",
+        "drupal/admin_toolbar": "^3.3",
+        "drupal/config_ignore": "^2.3",
+        "drupal/config_split": "^1.9",
+        "drupal/core-composer-scaffold": "^9",
+        "drupal/core-recommended": "^9",
+        "drupal/devel": "^5.1",
+        "drupal/workbench": "^1.4",
+        "drupal/workbench_tabs": "^1.6",
+        "drush/drush": "^11"
+    },
+    "require-dev": {
+        "drupal/core-dev": "^9",
+        "drupal/drupal-extension": "^4",
+        "palantirnet/the-build": "^4@beta"
+    },
+    "suggest": {
+        "cweagans/composer-patches": "Try ^1.7. Apply patches to packages, especially Drupal.org contrib.",
+        "drupal/admin_toolbar": "Transforms the default Drupal Toolbar into a drop-down menu.",
+        "drupal/environment_indicator": "Adds a configurable color bar to each one of your environments to help identify which environment you are currently working in.",
+        "drupal/config_ignore": "Exclude configuration to be exported to the configuration set.",
+        "drupal/stage_file_proxy": "A solution for getting production files on a development server on demand (add to your development config_split).",
+        "drupal/twig_xdebug": "Enables use of Xdebug breakpoints with Twig templates (add to your development config_split)."
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "drupal/core-composer-scaffold": true,
+            "cweagans/composer-patches": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "phpstan/extension-installer": true
+        },
+        "platform": {
+            "php": "8.1"
+        },
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            },
+            "allowed-packages": [
+                "drupal/core"
+            ],
+            "file-mapping": {
+                "[web-root]/.htaccess": {
+                    "mode": "replace",
+                    "path": "web/core/assets/scaffold/files/htaccess",
+                    "overwrite": false
+                }
+            }
+        },
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
+            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
+        },
+        "enable-patching": true,
+        "composer-exit-on-patch-failure": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        }
+    }
+}
