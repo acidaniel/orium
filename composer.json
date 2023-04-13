@@ -17,17 +17,17 @@
             "type": "package",
             "package": {
                 "name": "acidaniel/challenge_movie_entity",
-                "version": "1.0",
+                "version": "1.1",
                 "type": "drupal-module",
                 "dist": {
-                    "url": "https://github.com/acidaniel/challenge_movie_entity/archive/refs/heads/master.zip",
+                    "url": "https://github.com/acidaniel/challenge_movie_entity/archive/refs/tags/1.1.zip",
                     "type": "zip"
                 }
             }
         }
     ],
     "require": {
-        "acidaniel/challenge_movie_entity": "^1.0",
+        "acidaniel/challenge_movie_entity": "^1.1",
         "composer/installers": "^2.0",
         "drupal/admin_toolbar": "^3.3",
         "drupal/config_ignore": "^2.3",

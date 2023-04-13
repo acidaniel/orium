@@ -4,14 +4,14 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9fa153dd8b1e85bd18ed7551246a9dd0",
+    "content-hash": "4a88a50ec32fe18475cc99c49c0e0624",
     "packages": [
         {
             "name": "acidaniel/challenge_movie_entity",
-            "version": "1.0",
+            "version": "1.1",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/acidaniel/challenge_movie_entity/archive/refs/heads/master.zip"
+                "url": "https://github.com/acidaniel/challenge_movie_entity/archive/refs/tags/1.1.zip"
             },
             "type": "drupal-module"
         },
